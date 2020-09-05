@@ -47,7 +47,7 @@ function makeTable(d) {
     d3.event.preventDefault();
 
     //collect inputs
-    var inputs = {date:'', city:'', state:'', country:'', shape:'', duration:0, comments:''};
+    var inputs = {date:'', city:'', state:'', country:'', shape:'', duration:'', comments:''};
 
     // Get the value property of the input elements
     inputs.date = d3.select("#datetime").property("value");
