@@ -13,7 +13,7 @@ var ufoTable = d3.select("#ufo-results");
 function match_data(inputs) {
     var matches = ufoData;
     if (inputs.date) {
-        matches = matches.filter(ufo => ufo.datetime == inputs.date);
+        matches = matches.filter(ufo => ufo.datetime.includes(inputs.date));
     }
     if (inputs.city) {
         matches = matches.filter(ufo => ufo.city.includes(inputs.city.toLowerCase()));
@@ -60,7 +60,6 @@ function makeTable(d) {
 
     // Use the form input to filter the data
     var matches = match_data(inputs);
-
 
     //console.log(matches);
     //clear info
